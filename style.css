@@ -1,0 +1,161 @@
+#game {
+  width: 400px;
+  height: 400px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+}
+
+#body-header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('Assets/back.jpg');
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  box-sizing: border-box; /* Ensure box-sizing is set to border-box */
+
+  overflow: hidden; /* Prevent page scrolling */
+}
+#confetti {
+  background-image: url('Assets/spin-n-win-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pin {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  z-index: 2;
+}
+/* 
+.wheel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 3%;
+  margin-bottom: 50px;
+}
+
+.stand {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 109%;
+  width: 40%;
+  height: 13%;
+  z-index: -1;
+}
+
+.button {
+  display: absolute;
+  border-radius: 100px;
+  width: 80px;
+  transform: translate(200%, -315%);
+  cursor: pointer;
+  margin-right: 60px;
+} */
+
+/* Style the stand to position it and make it larger */
+.stand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8px;
+  width: 105%; /* Adjust the width to make the stand larger */
+  height: auto; /* Automatically adjust height based on the image */
+  z-index: -1;
+  /* background-image: url('Assets/stand.png'); */
+  background-size: cover; /* Ensure it covers the whole stand */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Style the wheel to make it 100% of the stand container */
+.wheel {
+  width: 89%;
+  height: 89%;
+  margin: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  position: relative; /* Add this to make it a reference for absolute positioning */
+}
+
+/* Style the button to position it in the middle of the wheel */
+.button {
+  position: absolute;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1; /* Make sure it's above the wheel */
+}
+
+.button:hover {
+  box-shadow: 0px 0px 10px 4px #fa513e;
+}
+
+.blur {
+  animation: blur 10s;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(0.4px);
+  }
+  80% {
+    filter: blur(0.4px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+#info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  pointer-events: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
